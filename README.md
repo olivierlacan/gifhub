@@ -3,6 +3,11 @@ gifhub
 
 A hub for all the gifs, searchable by keyword. I know...
 
+## Origins
+
+Ethan (@beep) Marcotte's [bukk.it](http://bukk.it) is great, but it's hard to search and sometimes [a bit slow](http://storify.com/olivierlacan/gifhub-inception). 
+And I've always wanted a good tool to search high quality GIFs out there.
+
 ## Features
 
 * Search for GIFs by emotion, or any keyword
