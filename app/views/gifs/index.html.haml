@@ -6,6 +6,6 @@
   %p No GIFs to show.
 %p= link_to "Add Gifs", new_gif_path
 
-= simple_form_for Gif.new, remote: true do |f|
+= simple_form_for Gif.new do |f|
   = f.input :source_url
   = f.submit
