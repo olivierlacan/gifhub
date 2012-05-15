@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require ember
+//= require ember
+//= require ember/gifhub
 //= require_tree .
