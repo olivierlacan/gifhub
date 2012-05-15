@@ -17,11 +17,11 @@ class GifsController < ApplicationController
   def create
     @gif = Gif.new(params[:gif])
     if @gif.save
-      flash[:notice] = "Win!"
-      respond_with @gif
+      flash[:notice] = "Wee!"
+      redirect_to gifs_url
     else
-      flash[:error] = "Um, failed. Lame."
-      render :new
+      flash[:error] = "Um, lame."
+      redirect_to gifs_url
     end
   end
 
@@ -32,10 +32,10 @@ class GifsController < ApplicationController
   def update
     @gif = Gif.find(params[:id])
     if @gif.update_attributes(params[:gif])
-      flash[:notice] = "Win!"
-      respond_with @gif
+      flash[:notice] = "Wee!"
+      redirect_to gifs_url
     else
-      flash[:error] = "Nope."
+      flash[:error] = "Nope. Noooope!"
       render :edit
     end
   end
