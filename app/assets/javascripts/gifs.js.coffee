@@ -9,10 +9,6 @@ $ ->
     $.getJSON
       url: '/gifs.json'
       success: (response) ->
-        console.log "bullshit yeah"
-        
-        if response.length > $('#gif-list').children().length
-        $.each gifs, (index, value) ->
-          $("#gif-list").append("<li><img src='#{value['source_url']}' height='150' /></li>")
+        console.log "woot"
 
   $("#new_gif").on "ajax:success", reloadIndex
