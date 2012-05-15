@@ -16,8 +16,8 @@ development:
   adapter: postgresql
   encoding: unicode
   database: gifhub_development
-  pool: 5
-  username: gifhub
+  pol: 5
+  username: olivierlacan
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,13 +43,5 @@ test:
   encoding: unicode
   database: gifhub_test
   pool: 5
-  username: gifhub
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: gifhub_production
-  pool: 5
-  username: gifhub
+  username: olivierlacan
   password:
