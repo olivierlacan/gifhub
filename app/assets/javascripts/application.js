@@ -12,7 +12,5 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require ember
-//= require ember
-//= require ember/gifhub
+//= require jquery.tokeninput
 //= require_tree .

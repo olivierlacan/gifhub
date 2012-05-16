@@ -1,7 +1,12 @@
 class Gif < ActiveRecord::Base
-  attr_accessible :filename, :source_url
+  attr_accessible :filename, :source_url, :tag_tokens
+  attr_reader :tag_tokens
 
   has_and_belongs_to_many :tags
+
+  def tag_tokens=(tokens)
+    self.tag_ids = Tag.ids_from_tokens(tokens)
+  end
 
   def to_s
     self.source_url

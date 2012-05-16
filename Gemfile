@@ -14,7 +14,7 @@ end
 gem 'haml-rails'
 gem 'simple_form'
 gem 'jquery-rails'
-gem "ember-rails"
+gem 'rails_tokeninput'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

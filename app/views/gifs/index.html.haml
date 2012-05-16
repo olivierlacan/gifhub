@@ -1,11 +1,12 @@
+%h2 Add a GIF
+= simple_form_for Gif.new do |f|
+  = f.input :source_url, label: "GIF URL"
+  = f.input :tag_tokens, label: "Keywords" #, input_html: { data: {load: Tag.all} }
+  = f.submit
+
 - unless @gifs.empty?
   %ul#gif-list
-    - @gifs.each do |gif|
-      %li= image_tag(gif, height: "150")
+    - @gifs.reverse_each do |gif|
+      %li= image_tag(gif, alt: gif.source_url, title: gif.tags.to_sentence)
 - else
   %p No GIFs to show.
-%p= link_to "Add Gifs", new_gif_path
-
-= simple_form_for Gif.new do |f|
-  = f.input :source_url
-  = f.submit
