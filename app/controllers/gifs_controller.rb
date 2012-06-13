@@ -20,7 +20,7 @@ class GifsController < ApplicationController
       flash[:notice] = "Wee!"
       redirect_to gifs_url
     else
-      flash[:error] = "Um, lame."
+      flash[:error] = "Um, forgetting something?"
       redirect_to gifs_url
     end
   end
@@ -45,5 +45,22 @@ class GifsController < ApplicationController
     @gif.destroy
     flash[:notice] = "Blasted that thing away."
     redirect_to gifs_url
+  end
+
+  def search
+    if params[:search]
+      redirect_to search_url("#{params[:search][:query]}") 
+    else
+      @gif = Gif.joins(:tags).where('tags.name ILIKE ?', "%#{params[:query]}%").first
+      if @gif.present?
+        respond_with @gif
+      else
+        flash[:error] = "Ermahgerd Nufern!"
+        respond_with @gif do |format|
+          format.json { render json: "Ermahgerd Nufern!", status: :unprocessable_entity }
+          format.html { redirect_to search_url }
+        end       
+      end
+    end
   end
 end

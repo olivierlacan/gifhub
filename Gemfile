@@ -20,3 +20,8 @@ gem 'rails_tokeninput'
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'unicorn'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-remote'
+end

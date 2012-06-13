@@ -7,5 +7,8 @@
   = javascript_include_tag "application"
   = csrf_meta_tags
 %body
-  %h1 GifHub
+  %h1= link_to "GifHub", root_url
+  - [:notice, :error, :success].each do |key|
+    - unless flash[key].blank?
+      %p{ :class => "flash #{key}" }= flash[key] 
   = yield

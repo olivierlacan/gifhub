@@ -4,6 +4,8 @@ class Gif < ActiveRecord::Base
 
   has_and_belongs_to_many :tags
 
+  validates :source_url, presence: true
+
   def tag_tokens=(tokens)
     self.tag_ids = Tag.ids_from_tokens(tokens)
   end
