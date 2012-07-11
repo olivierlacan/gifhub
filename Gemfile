@@ -16,9 +16,6 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_tokeninput'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
 gem 'unicorn'
 
 group :development, :test do
