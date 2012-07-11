@@ -32,3 +32,6 @@ exclusively with pop culture references.
 ## Models
 1. Gif
 2. Tag (assoc. with Gif via Join table 'gifs_tags')
+
+## License
+
