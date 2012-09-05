@@ -3,7 +3,7 @@ class GifsController < ApplicationController
   respond_to :html, :json
 
   def index
-    respond_with @gifs = Gif.all
+    respond_with @gifs = Gif.paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
