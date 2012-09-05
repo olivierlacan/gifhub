@@ -15,6 +15,7 @@ gem 'haml-rails'
 gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_tokeninput'
+gem 'will_paginate'
 
 gem 'unicorn'
 

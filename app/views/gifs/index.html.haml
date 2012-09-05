@@ -4,6 +4,8 @@
   = f.input :tag_tokens, label: "Keywords" #, input_html: { data: {load: Tag.all} }
   = f.submit
 
+= will_paginate @gifs
+
 - unless @gifs.empty?
   %ul#gif-list
     - @gifs.reverse_each do |gif|
