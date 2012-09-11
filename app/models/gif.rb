@@ -6,6 +6,8 @@ class Gif < ActiveRecord::Base
 
   validates :source_url, presence: true
 
+  scope :recent, order("created_at DESC")
+
   def tag_tokens=(tokens)
     self.tag_ids = Tag.ids_from_tokens(tokens)
   end
