@@ -8,7 +8,7 @@
 
 - unless @gifs.empty?
   %ul#gif-list
-    - @gifs.reverse_each do |gif|
+    - @gifs.each do |gif|
       %li= image_tag(gif, alt: gif.source_url, title: gif.tags.to_sentence)
 - else
   %p No GIFs to show.
