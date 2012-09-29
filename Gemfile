@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'jquery-rails'
 gem 'rails_tokeninput'
 gem 'will_paginate'
+gem 'masonry-rails'
 
 gem 'unicorn'
 
