@@ -1,4 +1,4 @@
-gifhub ![Maintenance Status](https://img.shields.io/badge/maintenance-retired-red.svg]
+gifhub ![Maintenance Status](https://img.shields.io/badge/maintenance-retired-red.svg)
 ======
 
 A hub for all the gifs, searchable by keyword. I know...
